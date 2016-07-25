@@ -1,0 +1,28 @@
+Name:                parsestar-aeson
+Version:             0.1.0.0
+Synopsis:            Star Parser.
+Description:
+  Convert NMR-STAR data (used by BMRB databank repository of biological nuclear
+  magnetic resonance data) into JSON documents.
+license:             ECL-2.0
+license-file:        LICENSE
+author:              Mark Borkum
+maintainer:          mark.borkum@pnnl.gov
+copyright:           2016 Pacific Northwest National Laboratory
+category:            Chemistry, Physics
+build-type:          Simple
+cabal-version:       >=1.10
+
+Executable parsestar-aeson
+  Main-Is:             Main.hs
+  Build-Depends:
+    base                 >=4.7 && <4.8,
+    aeson                >=0.8,
+    bytestring           >=0.10,
+    parsestar            ==1.5,
+    text                 >=1.1,
+    unordered-containers >=0.2.4,
+    vector               >=0.10
+  GHC-Options:         -O2 -Wall
+  HS-Source-Dirs:      src
+  default-language:    Haskell2010
